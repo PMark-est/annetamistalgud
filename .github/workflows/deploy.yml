@@ -61,7 +61,7 @@ jobs:
             rm ${{ env.RELEASE_NAME }}.tar.gz
 
             # Symlink new release to current
-            ln -sfn ${{ env.RELEASES_DIR }}/${{ env.RELEASE_NAME }}/dist ${{ env.APP_ROOT }}/liides
+            ln -sfn ${{ env.RELEASES_DIR }}/${{ env.RELEASE_NAME }}/dist ${{ env.APP_ROOT }}/annetamistalgud
 
             # Restart via PM2 (expects ecosystem config in release)
             cd ${{ env.APP_ROOT }}/annetamistalgud/dist
