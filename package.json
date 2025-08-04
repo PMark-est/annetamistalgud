@@ -8,6 +8,7 @@
     "dev:api": "nodemon --watch server --ext ts,tsx --exec tsx server/main.ts",
     "dev:vite": "vite",
     "build": "vite build && npm run bundle --prefix ./server",
+    "copy:prisma": "npx prisma generate && cp -r prisma dist/prisma && cp -r generated dist/generated && cp -r node_modules/.prisma/client dist/generated/prisma",
     "lint": "eslint .",
     "preview": "vite preview"
   },
