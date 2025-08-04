@@ -1,0 +1,14 @@
+model Goal {
+  id          Int        @id @default(autoincrement())
+  name        String     @db.Text
+  code        String     @db.Text
+  target      Float      @db.Double
+  color       String     @db.Text
+  unit        String     @default("€")
+  link        String     @default("#donation-section") @db.Text
+  message     String     @default("Toeta")
+  description String     @default("default kijreldus") @db.Text
+  donations   Donation[]
+
+  @@map("goals")
+}

@@ -1,0 +1,11 @@
+model Donation {
+  id                        Int      @id @default(autoincrement())
+  goalID                    Int      @map("goal_id")
+  goal                      Goal     @relation(fields: [goalID], references: [id])
+  amount                    Float    @db.Double
+  montonioMerchantReference String   @db.Text
+  paid                      Boolean  @default(false)
+  date                      DateTime @default(now())
+
+  @@map("donations")
+}

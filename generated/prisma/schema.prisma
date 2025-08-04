@@ -1,0 +1,44 @@
+model Donation {
+  id                        Int      @id @default(autoincrement())
+  goalID                    Int      @map("goal_id")
+  goal                      Goal     @relation(fields: [goalID], references: [id])
+  amount                    Float    @db.Double
+  montonioMerchantReference String   @db.Text
+  paid                      Boolean  @default(false)
+  date                      DateTime @default(now())
+
+  @@map("donations")
+}
+
+model Goal {
+  id          Int        @id @default(autoincrement())
+  name        String     @db.Text
+  code        String     @db.Text
+  target      Float      @db.Double
+  color       String     @db.Text
+  unit        String     @default("€")
+  link        String     @default("#donation-section") @db.Text
+  message     String     @default("Toeta")
+  description String     @default("default kijreldus") @db.Text
+  donations   Donation[]
+
+  @@map("goals")
+}
+
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider        = "prisma-client-js"
+  output          = "../generated/prisma"
+  previewFeatures = ["relationJoins"]
+  binaryTargets   = ["native", "debian-openssl-1.1.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}

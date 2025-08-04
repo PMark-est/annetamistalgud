@@ -1,0 +1,13 @@
+{
+  "name": "ch-veebileht",
+  "private": true,
+  "version": "0.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "bundle": "node ../esbuild.config.cjs",
+    "serve": "npm run build && node dist/main.js"
+  },
+  "prisma": {
+    "schema": "./prisma"
+  }
+}
