@@ -1,6 +1,6 @@
-import { getHoiukoduAmount } from './google-sheets-service';
 import { Goal } from '../../types/donations';
 import { prisma } from '../prisma';
+import { getHoiukoduAmount } from './google/google-sheets-service';
 
 /**
  * Get the Goal ID from the donation type string

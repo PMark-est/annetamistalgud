@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 
 export function decodePaymentToken(token: string) {
   let secretKey = process.env.MONTONIO_SANDBOX_SECRET_KEY;
-  if (process.env.NODE_ENV === 'prod') {
+  if (process.env.NODE_ENV === 'production') {
     secretKey = process.env.MONTONIO_SECRET_KEY;
   }
   try {

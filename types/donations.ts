@@ -10,3 +10,9 @@ export interface Goal {
   description: string;
   amountOfDonations: number;
 }
+
+export interface SheetsGoals {
+  type: string;
+  amountDonated: number;
+  donationGoal: number;
+}

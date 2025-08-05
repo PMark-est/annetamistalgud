@@ -5,7 +5,7 @@ export async function fetchPaymentMethods(): Promise<any> {
   let accessKey = process.env.MONTONIO_SANDBOX_ACCESS_KEY;
   let secretKey = process.env.MONTONIO_SANDBOX_SECRET_KEY;
   let url = process.env.MONTONIO_SANDBOX_API_URL;
-  if (process.env.NODE_ENV === 'prod') {
+  if (process.env.NODE_ENV === 'production') {
     accessKey = process.env.MONTONIO_ACCESS_KEY;
     secretKey = process.env.MONTONIO_ACCESS_KEY;
     url = process.env.MONTONIO_API_URL;

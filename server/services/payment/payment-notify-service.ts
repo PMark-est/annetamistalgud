@@ -3,7 +3,7 @@ import { prisma } from '../../prisma';
 
 export async function handlePaymentNotification(orderToken: string) {
   let secretKey = process.env.MONTONIO_SANDBOX_SECRET_KEY;
-  if (process.env.NODE_ENV === 'prod') {
+  if (process.env.NODE_ENV === 'production') {
     secretKey = process.env.MONTONIO_SECRET_KEY;
   }
   const decoded = jwt.verify(orderToken, secretKey as string) as {
