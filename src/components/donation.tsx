@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Button from './button/button.tsx';
+import React, { useEffect, useState } from 'react';
 import type { Goal } from '../../types/donations';
+import Button from './button/button.tsx';
 
 interface StoreSetupData {
   [key: string]: any;
@@ -137,11 +137,10 @@ const Donation: React.FC<{
             ))}
           </span>
           <input
-            className={`rounded-full w-full mt-4 p-2 ${
-              donation === undefined || donationAmounts.includes(donation)
-                ? 'bg-white'
-                : 'bg-pink-100'
-            }`}
+            className={`rounded-full w-full mt-4 p-2 ${donation === undefined || donationAmounts.includes(donation)
+              ? 'bg-white'
+              : 'bg-pink-100'
+              }`}
             type='number'
             placeholder='Muu summa'
             onChange={e => {
@@ -162,13 +161,13 @@ const Donation: React.FC<{
                 callback={() => {
                   setDonationCode(goal.code);
                 }}
-                className={`w-full lg:w-54 relative p-2 px-6 ${donationCode === goal.code ? 'bg-pink-100' : 'bg-white'}`}
+                className={`w-full lg:max-w-1/2 rounded-xl text-start relative overflow-hidden p-2 ${donationCode === goal.code ? 'bg-pink-100' : 'bg-white'}`}
               >
                 <div
-                  className='absolute w-full h-full top-0 left-0 border-l-32 gap-2 rounded-full'
-                  style={{ borderColor: goal.color }}
+                  className='absolute top-0 left-0 w-2.5 h-full'
+                  style={{ backgroundColor: goal.color }}
                 />
-                <div className='text-start flex flex-col px-8'>
+                <div className='ml-4'>
                   <p>{goal.name}</p>
                   <p className='text-gray-500 text-sm'>{goal.code}</p>
                 </div>

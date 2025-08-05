@@ -12,9 +12,8 @@ export async function getHoiukoduAmount(refresh = false): Promise<number> {
   }
 
   try {
-    console.log(`${process.env.SHEETS}?key=${process.env.GOOGLE_API_KEY}`);
     const { data } = await axios(
-      `${process.env.SHEETS}?key=${process.env.GOOGLE_API_KEY}`
+      `https://sheets.googleapis.com/v4/spreadsheets/t/values/Sheet1!A1:C5?key=${process.env.GOOGLE_API_KEY}`
     );
 
     for (let i = 1; i < data.values.length; i++) {
