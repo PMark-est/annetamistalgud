@@ -494,11 +494,11 @@ export default function App() {
             </div>
 
             {/* Helper text with arrows */}
-            <div className="absolute hidden lg:block right-[50px] top-[76px] w-[200px]">
+            <div className="absolute hidden lg:block right-[-200px] top-[76px] w-[200px]">
               <p className="font-['Schoolbell',sans-serif] leading-[normal] text-[#29d4e8] text-[28px] tracking-[-1.4px] uppercase mb-4">
                 Vali summa
               </p>
-              <div className="flex justify-start mt-8">
+              <div className="flex justify-center mt-8">
                 <div className="h-[119.299px] rotate-[58.37deg] w-[168.8px]">
                   <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 169 120">
                     <path d={svgPaths.p2518be00} fill="var(--fill-0, #29D4E8)" id="XMLID_1_" />
@@ -507,12 +507,12 @@ export default function App() {
               </div>
             </div>
 
-            <p className="absolute hidden lg:block right-[50px] top-[387.5px] font-['Schoolbell',sans-serif] leading-[normal] text-[#29d4e8] text-[28px] tracking-[-1.4px] uppercase w-[200px]">
+            <p className="absolute hidden lg:block right-[-230px] top-[387.5px] font-['Schoolbell',sans-serif] leading-[normal] text-[#29d4e8] text-[28px] tracking-[-1.4px] uppercase w-[278px]">
               Selgitus tuleb automaatselt
             </p>
 
-            <div className="absolute hidden lg:block right-[50px] top-[528px] w-[200px]">
-              <p className="font-['Schoolbell',sans-serif] leading-[normal] text-[#29d4e8] text-[28px] tracking-[-1.4px] uppercase">
+            <div className="absolute hidden lg:block right-[-150px] top-[528px]">
+              <p className="font-['Schoolbell',sans-serif] leading-[normal] text-[#29d4e8] text-[28px] tracking-[-1.4px] uppercase w-[126.881px]">
                 Viimaseks vali pank
               </p>
             </div>
