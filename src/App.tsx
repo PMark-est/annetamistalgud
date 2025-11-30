@@ -494,7 +494,7 @@ export default function App() {
             </div>
 
             {/* Helper text with arrows */}
-            <div className="absolute hidden lg:block left-[650px] top-[76px] w-[200px]">
+            <div className="absolute hidden lg:block right-[50px] top-[76px] w-[200px]">
               <p className="font-['Schoolbell',sans-serif] leading-[normal] text-[#29d4e8] text-[28px] tracking-[-1.4px] uppercase mb-4">
                 Vali summa
               </p>
@@ -507,11 +507,11 @@ export default function App() {
               </div>
             </div>
 
-            <p className="absolute hidden lg:block left-[650px] top-[387.5px] font-['Schoolbell',sans-serif] leading-[normal] text-[#29d4e8] text-[28px] tracking-[-1.4px] uppercase w-[200px]">
+            <p className="absolute hidden lg:block right-[50px] top-[387.5px] font-['Schoolbell',sans-serif] leading-[normal] text-[#29d4e8] text-[28px] tracking-[-1.4px] uppercase w-[200px]">
               Selgitus tuleb automaatselt
             </p>
 
-            <div className="absolute hidden lg:block left-[650px] top-[528px] w-[200px]">
+            <div className="absolute hidden lg:block right-[50px] top-[528px] w-[200px]">
               <p className="font-['Schoolbell',sans-serif] leading-[normal] text-[#29d4e8] text-[28px] tracking-[-1.4px] uppercase">
                 Viimaseks vali pank
               </p>
