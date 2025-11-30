@@ -154,7 +154,7 @@ export default function App() {
             {/* On mobile, content goes inside */}
             <div className="lg:hidden">
               {/* Mobile content */}
-              <h1 className="font-['Schoolbell',sans-serif] text-[#29d4e8] text-[40px] sm:text-[50px] uppercase mb-4">KALLIS TOETAJA,</h1>
+              <h1 className="font-['Schoolbell',sans-serif] text-[#29d4e8] text-[40px] sm:text-[50px] uppercase mb-4">KALLIS CATS HELPI TOETAJA,</h1>
               <p className="font-['Schoolbell',sans-serif] text-[#ff80ce] text-[40px] sm:text-[50px] uppercase mb-6">Sel aastal on meie ainus jõulusoov, et Saaksime jälle arsti juurde minna 🙏</p>
               <p className="font-['Schoolbell',sans-serif] text-[#062d3e] text-[18px] sm:text-[22px] leading-[28px] sm:leading-[32px] mb-8">Ega me muidu ei küsiks, kui et kahejalgne räägib, et kõigil on raske ja, et meil on aina raskem ots-otsaga kokku tulla. Me ei saa enam arsti juurdegi minna, sest võlad on nii suureks kasvanud. Kas sina saaksid meid natukenegi järje peale aidata? Suur suur aitäh sulle! </p>
               
