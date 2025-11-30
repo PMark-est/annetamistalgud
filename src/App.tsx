@@ -193,7 +193,7 @@ export default function App() {
         <div className="absolute left-[50%] translate-x-[-50%] top-[20.33px] w-[1470px] hidden lg:block">
           {/* Heading Text */}
           <div className="absolute content-stretch flex h-[128px] items-start left-[85.75px] top-[82.75px] w-[782px]">
-            <p className="basis-0 font-['Schoolbell',sans-serif] grow leading-[88px] min-h-px min-w-px not-italic relative shrink-0 text-[#29d4e8] text-[93px] tracking-[-4.65px] uppercase">KALLIS TOETAJA,</p>
+            <p className="basis-0 font-['Schoolbell',sans-serif] grow leading-[88px] min-h-px min-w-px not-italic relative shrink-0 text-[#29d4e8] text-[93px] tracking-[-4.65px] uppercase">KALLIS CATS HELPI TOETAJA,</p>
           </div>
           <p className="absolute font-['Schoolbell',sans-serif] leading-[88px] left-[85.75px] not-italic text-[#ff80ce] text-[93px] top-[191.75px] tracking-[-4.65px] uppercase w-[813.5px]">Sel aastal on meie ainus jõulusoov, et Saaksime jälle arsti juurde minna 🙏</p>
           <p className="absolute font-['Schoolbell',sans-serif] leading-[37px] left-[85.75px] not-italic text-[#062d3e] dark:text-gray-200 text-[28px] top-[558.25px] w-[674.819px] bg-white dark:bg-gray-900 px-4 py-3 rounded-2xl z-20">Ega me muidu ei küsiks, kui et kahejalgne räägib, et kõigil on raske ja, et meil on aina raskem ots-otsaga kokku tulla. Me ei saa enam arsti juurdegi minna, sest võlad on nii suureks kasvanud. Kas sina saaksid meid natukenegi järje peale aidata? Suur suur aitäh sulle! </p>
