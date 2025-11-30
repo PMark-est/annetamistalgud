@@ -207,17 +207,13 @@ export default function App() {
           <p className="absolute font-['Schoolbell',sans-serif] leading-[37px] left-[85.75px] not-italic text-[#062d3e] dark:text-gray-200 text-[28px] top-[558.25px] w-[674.819px] bg-white dark:bg-gray-900 px-4 py-3 rounded-2xl z-20">Ega me muidu ei küsiks, kui et kahejalgne räägib, et kõigil on raske ja, et meil on aina raskem ots-otsaga kokku tulla. Me ei saa enam arsti juurdegi minna, sest võlad on nii suureks kasvanud. Kas sina saaksid meid natukenegi järje peale aidata? Suur suur aitäh sulle! </p>
           
           {/* Progress Bar Section */}
-          <div className="absolute left-0 top-[831.34px]">
+          <div className="absolute left-0 top-[831.34px] z-20">
             {/* Progress Bar Container */}
-            <div className="absolute content-stretch flex flex-col gap-[16px] h-[136px] items-start left-[85.75px] top-0 w-[1072px]">
+            <div className="absolute flex flex-col gap-[16px] items-start left-[85.75px] top-0 w-[1072px]">
               {/* Labels */}
-              <div className="h-[60px] relative shrink-0 w-full">
-                <div className="absolute h-[60px] left-0 top-0 w-[228.844px]">
-                  <p className="absolute font-['Schoolbell',sans-serif] leading-[60px] left-0 not-italic text-[#ff80ce] text-[40px] text-nowrap top-0 tracking-[-2px] uppercase whitespace-pre">Kogutud kokku</p>
-                </div>
-                <div className="absolute h-[52.5px] left-[824.33px] top-[7.5px] w-[247.672px]">
-                  <p className="absolute font-['Schoolbell',sans-serif] leading-[52.5px] left-0 not-italic text-[#062d3e] text-[35px] top-0 tracking-[1.5px] w-[248px]">{totalCurrent.toFixed(2)}€ / {totalGoal}€</p>
-                </div>
+              <div className="flex justify-between items-baseline w-full bg-white dark:bg-gray-900 rounded-xl px-4 py-2 -mx-4">
+                <p className="font-['Schoolbell',sans-serif] leading-[60px] not-italic text-[#ff80ce] text-[40px] text-nowrap tracking-[-2px] uppercase">Kogutud kokku</p>
+                <p className="font-['Schoolbell',sans-serif] leading-[52.5px] not-italic text-[#062d3e] dark:text-gray-200 text-[35px] tracking-[1.5px]">{totalCurrent.toFixed(2)}€ / {totalGoal}€</p>
               </div>
 
               {/* Progress Bar */}
