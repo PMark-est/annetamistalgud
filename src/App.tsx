@@ -448,17 +448,17 @@ export default function App() {
               <div className="mb-8">
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
                   {[
-                    { name: 'SEB', bgColor: '#60CD18', textColor: 'text-black' },
-                    { name: 'Swedbank', bgColor: '#EE7023', textColor: 'text-white' },
-                    { name: 'LHV', bgColor: '#000000', textColor: 'text-white' },
-                    { name: 'Luminor', bgColor: '#481335', textColor: 'text-white' }
+                    { name: 'SEB', bic: 'EEUHEE2X', bgColor: '#60CD18', textColor: 'text-black' },
+                    { name: 'Swedbank', bic: 'HABAEE2X', bgColor: '#EE7023', textColor: 'text-white' },
+                    { name: 'LHV', bic: 'LHVBEE22', bgColor: '#000000', textColor: 'text-white' },
+                    { name: 'Luminor', bic: 'RIKOEE22', bgColor: '#481335', textColor: 'text-white' }
                   ].map((bank) => (
                     <button
                       key={bank.name}
-                      onClick={() => setSelectedBank(bank.name)}
+                      onClick={() => setSelectedBank(bank.bic)}
                       style={{
                         backgroundColor: bank.bgColor,
-                        boxShadow: selectedBank === bank.name ? '0 0 0 4px #29d4e8' : 'none'
+                        boxShadow: selectedBank === bank.bic ? '0 0 0 4px #29d4e8' : 'none'
                       }}
                       className="border-2 border-black rounded-[247px] h-[60px] flex items-center justify-center hover:opacity-90 transition-all"
                     >
@@ -468,16 +468,16 @@ export default function App() {
                 </div>
                 <div className="grid grid-cols-3 gap-3">
                   {[
-                    { name: 'Coop', bgColor: '#00B6FF', textColor: 'text-white' },
-                    { name: 'Citadele', bgColor: '#DC143C', textColor: 'text-white' },
-                    { name: 'Revolut', bgColor: '#FFFFFF', textColor: 'text-black' }
+                    { name: 'Coop', bic: 'EKRDEE22', bgColor: '#00B6FF', textColor: 'text-white' },
+                    { name: 'Citadele', bic: 'PARXEE22', bgColor: '#DC143C', textColor: 'text-white' },
+                    { name: 'Revolut', bic: 'REVOLT21', bgColor: '#FFFFFF', textColor: 'text-black' }
                   ].map((bank) => (
                     <button
                       key={bank.name}
-                      onClick={() => setSelectedBank(bank.name)}
+                      onClick={() => setSelectedBank(bank.bic)}
                       style={{
                         backgroundColor: bank.bgColor,
-                        boxShadow: selectedBank === bank.name ? '0 0 0 4px #29d4e8' : 'none'
+                        boxShadow: selectedBank === bank.bic ? '0 0 0 4px #29d4e8' : 'none'
                       }}
                       className="border-2 border-black rounded-[247px] h-[60px] flex items-center justify-center hover:opacity-90 transition-all"
                     >
