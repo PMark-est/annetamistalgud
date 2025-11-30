@@ -298,19 +298,18 @@ export default function App() {
               <p className="font-['Schoolbell',sans-serif] leading-[normal] text-[#29d4e8] text-[28px] tracking-[-1.4px] uppercase w-[218.949px]">
                 Uuendame makstud arvete kokkuvõtet igal hommikul
               </p>
-              
-              {/* Decorative arrow */}
-              <div className="mt-4 flex justify-center">
-                <div className="h-[126.335px] rotate-[62.842deg] skew-x-[9.204deg] w-[193.942px]">
-                  <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 194 127">
-                    <path d={svgPaths.p348ffc60} fill="var(--fill-0, #29D4E8)" id="XMLID_1_" />
-                  </svg>
-                </div>
-              </div>
             </div>
           </div>
 
-          <div className="font-['Schoolbell',sans-serif] leading-[37px] not-italic text-[#062d3e] text-[20px] md:text-[28px] mb-16 max-w-[1026px] ml-[40px]">
+          <div className="font-['Schoolbell',sans-serif] leading-[37px] not-italic text-[#062d3e] text-[20px] md:text-[28px] mb-16 ml-[40px] relative">
+            {/* Decorative arrow - positioned to the right */}
+            <div className="absolute hidden lg:block right-0 top-0">
+              <div className="h-[126.335px] rotate-[62.842deg] skew-x-[9.204deg] w-[193.942px]">
+                <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 194 127">
+                  <path d={svgPaths.p348ffc60} fill="var(--fill-0, #29D4E8)" id="XMLID_1_" />
+                </svg>
+              </div>
+            </div>
             <p className="mb-4">Me tahame jätkata – sest iga väikene hingeke väärib võimalust.</p>
             
             <p className="mb-4">Meie varjupaigas ootab abi üle 400 kassi ja paljud neist vajavad just praegu kiiret veterinaararsti abi.</p>
