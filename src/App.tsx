@@ -540,15 +540,15 @@ export default function App() {
           </h2>
 
           <div className="bg-white rounded-[40px] shadow-lg p-12 md:p-16 max-w-[1200px] mx-auto relative overflow-hidden">
-            <div className="font-['Schoolbell',sans-serif] leading-[normal] not-italic text-[#062d3e] text-[20px] md:text-[28px] max-w-[1095px] ml-[40px]">
+            <div className="font-['Schoolbell',sans-serif] leading-[normal] not-italic text-[#062d3e] dark:text-gray-200 text-[20px] md:text-[28px] max-w-[1095px] ml-[40px] relative z-30 bg-white dark:bg-gray-900 rounded-2xl p-4 -m-4">
               <p className="mb-6">Iga euro on nagu väike pai mõnele nurrikule, kes seda praegu vajab.</p>
-              
+
               <p className="mb-6">👉 Iga annetus aitab maksta ühe arve, ravida ühe vigastuse, päästa ühe elu.</p>
-              
+
               <p className="mb-6">Me oleme südamest tänulikud igale inimesele, kes aitab meil uksed avatuna hoida.<br />Tänu teile saavad kassid, kes on kunagi olnud üksikud ja hirmul, nüüd tunda soojust, hoitust ja lootust.</p>
-              
+
               <p className="mb-6">Aitäh, et hoolid.<br />Aitäh, et märkad.</p>
-              
+
               <p className="mb-0">👉 Aitäh, et aitad meil kiisusid edasi aidata.</p>
             </div>
 
@@ -557,7 +557,7 @@ export default function App() {
               <div className="absolute h-[611.497px] left-0 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[68.737px_148.677px] mask-size-[266.109px_328.807px] top-0 w-[408.061px]" style={{ maskImage: `url('${imgImage15}')` }}>
                 <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover size-full" src={imgImage22} />
               </div>
-              <p className="absolute right-[80px] top-[150px] font-['Schoolbell',sans-serif] leading-[37px] text-[28px] text-black z-30">Anna-Liisa</p>
+              <p className="absolute right-[80px] top-[80px] font-['Schoolbell',sans-serif] leading-[37px] text-[28px] text-white z-30">Anna-Liisa</p>
             </div>
           </div>
         </div>
