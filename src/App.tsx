@@ -315,7 +315,7 @@ export default function App() {
             
             <p className="mb-4">Meie varjupaigas ootab abi üle 400 kassi ja paljud neist vajavad just praegu kiiret veterinaararsti abi.</p>
             
-            <p className="mb-4">💔 Meie suurim mure on täna loomakliinikute võlad, mis kokku ulatuvad 13 647 euroni.💔</p>
+            <p className="mb-4">💔 Meie suurim mure on täna loomakliinikute võlad, mis ulatuvad meeletutesse summadesse... 💔</p>
             
             <p className="mb-4">Mitmed arved on oodanud tasumist juba pikemat aega ja mitmed kliinikud on meiega ajutiselt peatunud – mitte sellepärast, et nad ei hooliks, vaid sellepärast, et meie võlad on lihtsalt kasvanud suuremaks kui keegi meist soovis.</p>
             
