@@ -145,15 +145,7 @@ export default function App() {
             <p className="font-['Schoolbell',sans-serif] text-[#ff80ce] text-[32px] leading-tight uppercase">Help</p>
           </div>
         </div>
-        
-        {/* Logo - Mobile */}
-        <div className="lg:hidden flex items-center justify-center mb-6">
-          <div className="text-center">
-            <p className="font-['Schoolbell',sans-serif] text-[#29d4e8] text-[28px] leading-tight uppercase">Cats</p>
-            <p className="font-['Schoolbell',sans-serif] text-[#ff80ce] text-[28px] leading-tight uppercase">Help</p>
-          </div>
-        </div>
-        
+
         {/* Main Container - Centered */}
         <div className="relative lg:absolute h-auto lg:h-[781px] left-0 lg:left-[50%] lg:translate-x-[-50%] top-0 lg:top-[144px] w-full lg:w-[1470px] px-4 lg:px-0">
           {/* White Card Container */}
@@ -549,11 +541,11 @@ export default function App() {
             </div>
 
             {/* Cat Image in corner - Made solid and brought to front */}
-            <div className="absolute right-[-50px] top-[50px] w-[400px] h-[500px] pointer-events-none hidden lg:block z-20">
-              <div className="absolute h-[611.497px] left-0 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[68.737px_148.677px] mask-size-[266.109px_328.807px] top-0 w-[408.061px]" style={{ maskImage: `url('${imgImage15}')` }}>
+            <div className="absolute right-[-30px] top-[80px] w-[300px] h-[380px] pointer-events-none hidden lg:block z-40">
+              <div className="absolute h-[460px] left-0 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[52px_112px] mask-size-[200px_247px] top-0 w-[306px]" style={{ maskImage: `url('${imgImage15}')` }}>
                 <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover size-full" src={imgImage22} />
               </div>
-              <p className="absolute right-[80px] top-[80px] font-['Schoolbell',sans-serif] leading-[37px] text-[28px] text-white z-30">Anna-Liisa</p>
+              <p className="absolute right-[60px] top-[60px] font-['Schoolbell',sans-serif] leading-[37px] text-[28px] text-white z-50">Anna-Liisa</p>
             </div>
           </div>
         </div>
