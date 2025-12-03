@@ -17,7 +17,7 @@ export default function ThankYou() {
   useEffect(() => {
     const fetchPaymentStatus = async () => {
       const urlParams = new URLSearchParams(window.location.search);
-      const orderToken = urlParams.get("orderToken");
+      const orderToken = urlParams.get("order-token");
 
       if (!orderToken) {
         setError("Makseteave puudub");
