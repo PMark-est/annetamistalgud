@@ -1,5 +1,12 @@
 import jwt from 'jsonwebtoken';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
+
+const MAX_RETRIES = 3;
+const INITIAL_RETRY_DELAY_MS = 1000;
+
+async function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 interface CreateOrderPayload {
   preferredBank: string;
@@ -59,17 +66,53 @@ export const createMontonioOrder = async ({
     expiresIn: '10m',
   });
 
-  try {
-    const response = await axios.post(`${url}/api/orders`, {
-      data: token,
-    });
-    return { paymentUrl: response.data.paymentUrl, merchantReference };
-  } catch (error) {
-    console.error('Montonio Error:\n', error);
-    if (axios.isAxiosError(error) && error.response) {
-      console.error('Montonio Response Status:', error.response.status);
-      console.error('Montonio Response Data:', JSON.stringify(error.response.data, null, 2));
+  let lastError: Error | null = null;
+
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      const response = await axios.post(
+        `${url}/api/orders`,
+        { data: token },
+        {
+          timeout: 30000,
+          headers: {
+            'User-Agent': 'CatsHelp-Donations/1.0 (+https://catshelp.ee)',
+          },
+        }
+      );
+      return { paymentUrl: response.data.paymentUrl, merchantReference };
+    } catch (error) {
+      lastError = error instanceof Error ? error : new Error('Unknown error');
+
+      if (axios.isAxiosError(error)) {
+        const axiosError = error as AxiosError;
+        const status = axiosError.response?.status;
+
+        // Log on every attempt
+        console.error(
+          `Montonio Error (attempt ${attempt}/${MAX_RETRIES}):`,
+          status,
+          axiosError.message
+        );
+
+        // Only retry on 403 (WAF/rate limit) or 5xx (server errors)
+        // Don't retry on 4xx client errors (except 403)
+        if (status && status !== 403 && status >= 400 && status < 500) {
+          console.error('Montonio Response Data:', JSON.stringify(axiosError.response?.data, null, 2));
+          throw new Error(`Failed to create Montonio order: ${axiosError.message}`);
+        }
+      }
+
+      // If we have retries left, wait with exponential backoff
+      if (attempt < MAX_RETRIES) {
+        const delay = INITIAL_RETRY_DELAY_MS * Math.pow(2, attempt - 1);
+        console.log(`Retrying Montonio request in ${delay}ms...`);
+        await sleep(delay);
+      }
     }
-    throw new Error(`Failed to create Montonio order: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
+
+  // All retries exhausted
+  console.error('Montonio: All retry attempts exhausted');
+  throw new Error(`Failed to create Montonio order after ${MAX_RETRIES} attempts: ${lastError?.message}`);
 };
